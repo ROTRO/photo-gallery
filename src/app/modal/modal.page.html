@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot='end'>
+      <ion-button (click)='selectCATEGORIE(this.Categorie)'>close</ion-button>
+    </ion-buttons>
+    <ion-title>Selectionner un Categorie</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-list>
+  <ion-item>
+    <ion-label>Categorie</ion-label>
+    <ion-select interface="popover" [(ngModel)]="Categorie">
+      <ng-container *ngFor="let item of Categories" >
+        <ion-select-option value={{item}}>{{item}}</ion-select-option>
+      </ng-container>
+      
+    </ion-select>
+  </ion-item>
+
+ 
+</ion-list>
+</ion-content>
